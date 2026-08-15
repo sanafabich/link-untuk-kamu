@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spesial Buat Kamu</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="preload"><p>Loading dulu . . .</p></div>
+
+  <div class="open" id="openScreen">
+    <div class="open-box">
+      <button class="lope" onclick="ilang()" aria-label="Buka ucapan">♥</button>
+      <h3>Pencet Love nya</h3>
+      <p class="small">Ada sesuatu yang spesial buat kamu ❤️</p>
+    </div>
+  </div>
+
+  <div class="bg">
+    <div style="background-image:url('1.jpg')"></div>
+    <div style="background-image:url('5.jpg')"></div>
+    <div style="background-image:url('4.jpg')"></div>
+    <div style="background-image:url('3.jpg')"></div>
+    <div style="background-image:url('2.jpg')"></div>
+    <div style="background-image:url('1.jpg')"></div>
+  </div>
+  <div class="bg-love">♥</div>
+
+  <main>
+    <section class="content contentslide1">
+      <div class="card">
+        <p class="typetxt1"></p>
+        <button class="lanjut lanjut1" onclick="tampilContent2()">Klik untuk Lanjut ya!</button>
+      </div>
+    </section>
+
+    <section class="content2 contentslide2">
+      <div class="card">
+        <p class="typetxt2"></p>
+        <div class="hadiahku">
+          <div class="row">
+            <button class="gift-wrap"><img kadoo="Kue ultah" src="kado.png" class="kado" alt="Kado"></button>
+            <button class="gift-wrap"><img kadoo="Es krim" src="kado.png" class="kado" alt="Kado"></button>
+          </div>
+          <div class="row">
+            <button class="gift-wrap"><img kadoo="Cinta tulusku" src="kado.png" class="kado" alt="Kado"></button>
+            <button class="gift-wrap"><img kadoo="Kasih sayangku" src="kado.png" class="kado" alt="Kado"></button>
+          </div>
+        </div>
+        <p class="gift-hint">Pilih salah satu kadonya 💝</p>
+      </div>
+    </section>
+
+    <section class="content contentslide4">
+      <div class="card">
+        <p class="typetxt4"></p>
+        <button class="lanjut lanjut4" onclick="tampilContent5()">Klik untuk Lanjut ya!</button>
+      </div>
+    </section>
+
+    <section class="content contentadascroll contentslide5">
+      <div class="card scroll-card">
+        <p class="typetxt5"></p>
+      </div>
+      <button class="lanjut lanjut5" onclick="tampilContent6()">Klik untuk Lanjut ya!</button>
+    </section>
+
+    <section class="content contentslide6">
+      <div class="card">
+        <p class="typetxt6"></p>
+        <button class="lanjut lanjut6" onclick="tampilContent3()">Klik untuk Lanjut ya!</button>
+      </div>
+    </section>
+
+    <section class="content2 contentslide3">
+      <div class="card">
+        <p class="typetxt3"></p>
+        <div class="formwish">
+          <textarea id="valuewish" rows="7" placeholder="Tulis pesan kamu di sini..."></textarea>
+        </div>
+        <button class="kirimwish" onclick="sendwish()">Kirim 💌</button>
+      </div>
+    </section>
+  </main>
+
+  <audio id="bgMusic" src="musik.mp3" loop preload="auto"></audio>
+  <script src="a.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;width:100%;height:100%;overflow:hidden;font-family:Arial,sans-serif}
+body{background:#170b16;color:#fff}
+.preload{position:fixed;inset:0;background:#170b16;z-index:9999;display:flex;align-items:center;justify-content:center;font-size:20px;transition:opacity .6s}
+.preload.hide{opacity:0;pointer-events:none}
+.open{position:fixed;inset:0;z-index:9000;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#160916,#5b173d)}
+.open-box{text-align:center;padding:35px 25px;max-width:420px}
+.lope{width:105px;height:105px;border:0;border-radius:50%;background:#fff;color:#e52d68;font-size:58px;box-shadow:0 0 0 0 rgba(255,255,255,.5);animation:pulse 1.6s infinite;cursor:pointer}
+.open h3{font-size:25px;margin:22px 0 8px}
+.small{opacity:.8}
+.bg{position:fixed;inset:0;z-index:0}
+.bg>div{position:absolute;inset:0;background-position:center;background-size:cover;opacity:0;animation:slide 30s infinite}
+.bg>div:nth-child(1){animation-delay:0s}.bg>div:nth-child(2){animation-delay:5s}.bg>div:nth-child(3){animation-delay:10s}.bg>div:nth-child(4){animation-delay:15s}.bg>div:nth-child(5){animation-delay:20s}.bg>div:nth-child(6){animation-delay:25s}
+.bg:after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.48)}
+.bg-love{position:fixed;z-index:1;inset:0;display:flex;align-items:center;justify-content:center;font-size:220px;color:rgba(255,255,255,.06);pointer-events:none}
+main{position:relative;z-index:2;width:100%;height:100%}
+.content,.content2{position:absolute;inset:0;display:none;align-items:center;justify-content:center;padding:22px}
+.content.active,.content2.active{display:flex}
+.card{width:min(88vw,700px);padding:30px 24px;border-radius:24px;background:rgba(20,8,20,.56);backdrop-filter:blur(9px);box-shadow:0 18px 60px rgba(0,0,0,.3);text-align:center}
+.card p{font-size:clamp(20px,4.8vw,34px);line-height:1.6;margin:0 0 25px;white-space:pre-line}
+.lanjut,.kirimwish{border:0;border-radius:999px;padding:13px 22px;background:#fff;color:#8f1d4d;font-size:16px;font-weight:700;cursor:pointer;box-shadow:0 8px 25px rgba(0,0,0,.22);display:none}
+.hadiahku{display:flex;flex-direction:column;gap:5px;align-items:center}
+.row{display:flex;justify-content:center;gap:15px}
+.gift-wrap{background:transparent;border:0;cursor:pointer;border-radius:20px;padding:3px}
+.gift-wrap:active{transform:scale(.94)}
+.kado{width:125px;max-width:28vw;filter:drop-shadow(0 10px 12px rgba(0,0,0,.3));animation:float 2.5s ease-in-out infinite}
+.row:nth-child(2) .gift-wrap:nth-child(2) .kado{animation-delay:.4s}
+.gift-hint{font-size:15px!important;opacity:.8;margin-top:15px!important}
+.scroll-card{max-height:68vh;overflow:auto;text-align:left}
+.scroll-card p{font-size:clamp(18px,4.3vw,27px)}
+.formwish textarea{width:100%;resize:none;border:0;border-radius:18px;padding:16px;font-size:17px;outline:none;background:rgba(255,255,255,.94);color:#333;margin-bottom:15px}
+.kirimwish{display:inline-block}
+@keyframes pulse{50%{box-shadow:0 0 0 18px rgba(255,255,255,0)}}
+@keyframes float{50%{transform:translateY(-8px) rotate(-2deg)}}
+@keyframes slide{0%,14%{opacity:1}18%,96%{opacity:0}100%{opacity:1}}
+@media(max-width:480px){.card{padding:25px 18px}.kado{width:105px}.row{gap:7px}}
